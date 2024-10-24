@@ -14,12 +14,10 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-
 .App {
     min-height: 100vh;
     display: flex;
 }
-
 
 .sideBar {
     flex: 3;
@@ -31,19 +29,19 @@ body {
     justify-content: space-between;
 }
 
-
 .main {
     flex: 9;
     padding: 2rem;
     background-color: #212133;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
 
 .logo {
     margin-right: 1rem;
     width: 40px;
 }
-
 
 .brand {
     margin-left: 1rem;
@@ -52,12 +50,10 @@ body {
     color: #b0b0d9;
 }
 
-
 .upperSide {
     flex-grow: 1;
     padding-bottom: 2rem;
     border-bottom: 2px solid #3a3a4f;
-    margin-right: -2px;
 }
 
 .upperSideTop {
@@ -66,12 +62,10 @@ body {
     margin-bottom: 2.5rem;
 }
 
-
 .addBtn {
     height: 2rem;
     padding-right: 1rem;
 }
-
 
 .midBtn {
     margin-top: 2.5rem;
@@ -103,7 +97,6 @@ body {
     width: auto;
 }
 
-
 .query {
     display: flex;
     align-items: center;
@@ -130,16 +123,13 @@ body {
     background-color: #50506b; 
 }
 
-
 .lowerSide {
     padding: 2rem;
     border-top: 2px solid #3a3a4f;
-    margin-right: -2px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
 
 .listItems {
     margin: 0.75rem;
@@ -149,18 +139,16 @@ body {
     justify-content: flex-start;
 }
 
-
 .listItemsImg {
     margin-right: 1rem; 
 }
-
 
 .lowerSide {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem; 
-
 }
+
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -172,4 +160,84 @@ body {
 
 ::-webkit-scrollbar-track {
     background-color: #2b2b3d;
+}
+
+.main {
+    min-height: calc(100vh - 14rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 6rem 10rem;
+    margin-bottom: 0;
+}
+
+.chatFooter {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.inp {
+    padding: 0.5rem;
+    background: #2b2b3d;
+    display: flex;
+    align-items: center;
+    border: 0.2rem;
+    width: 70rem;
+}
+
+.inp > input {
+    width: calc(100% - 3rem);
+    outline: none;
+    padding: 1.25rem;
+    color: white;
+}
+
+.inp > input,
+.send {
+    background: transparent;
+    border: none;
+}
+
+.chat {
+    margin: 1rem;
+    padding: 2rem 3rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: flex-start;
+    text-align: justify;
+   
+}
+
+.chatimg {
+    object-fit: cover;
+    width: 3.5rem;
+    margin-right: 2rem;
+    border-radius: 0.2rem;
+}
+
+.chats {
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    width: 100%;
+    flex-grow: 1;
+    height: calc(100vh - 17rem);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 70rem;
+}
+
+.bot {
+    background: #3b3b52;
+    width: fit-content;
+    border-radius: 0.5rem;
+}
+
+.chatFooter > p {
+    margin: 2rem 0;
 }
